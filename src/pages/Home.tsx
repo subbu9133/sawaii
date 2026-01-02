@@ -71,6 +71,12 @@ const Home = () => {
                         <Link to="/catering" className="inline-block px-8 py-3 border border-white/30 text-white hover:bg-white hover:text-black transition-all duration-300 uppercase tracking-widest text-sm">
                             Catering
                         </Link>
+                        <button
+                            onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+                            className="inline-block px-8 py-3 border border-white/30 text-white hover:bg-white hover:text-black transition-all duration-300 uppercase tracking-widest text-sm cursor-pointer"
+                        >
+                            Contact
+                        </button>
                     </motion.div>
                 </div>
             </section>
@@ -144,7 +150,7 @@ const Home = () => {
                         </div>
 
                         {/* Contact */}
-                        <div className="space-y-4">
+                        <div id="contact" className="space-y-4">
                             <div className="flex items-center justify-center md:justify-start gap-2 text-yellow-500 mb-2">
                                 <Phone className="w-5 h-5" />
                                 <h4 className="text-lg font-bold uppercase tracking-widest">Contact</h4>

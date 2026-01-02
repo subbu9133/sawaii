@@ -39,16 +39,16 @@ const GlassNavbar = () => {
             className={`fixed top-0 left-0 right-0 z-50 flex justify-center pt-6 transition-all duration-300 ${scrolled ? 'pt-4' : 'pt-6'}`}
         >
             <div className={`
-                backdrop-blur-md border border-white/10 rounded-full px-8 py-3 
-                flex items-center gap-8 shadow-2xl transition-all duration-300
-                ${scrolled ? 'bg-black/80 w-auto' : 'bg-black/40 w-[90%] max-w-5xl justify-between'}
+                backdrop-blur-md border border-white/10 rounded-full px-4 md:px-8 py-3 
+                flex items-center gap-3 md:gap-8 shadow-2xl transition-all duration-300
+                ${scrolled ? 'bg-black/80 w-auto' : 'bg-black/40 w-[95%] md:w-[90%] max-w-5xl justify-between'}
             `}>
                 <Link to="/" className={`flex items-center gap-2 ${scrolled ? 'hidden md:flex' : 'flex'}`}>
-                    <GreenScreenImage src="/sawaii-green-logo.png" alt="SAWAII Logo" className="h-12 w-auto object-contain" tolerance={50} />
+                    <GreenScreenImage src="/sawaii-green-logo.png" alt="SAWAII Logo" className="h-8 md:h-12 w-auto object-contain" tolerance={50} />
                 </Link>
 
                 {/* Links */}
-                <div className="flex items-center gap-6 md:gap-8">
+                <div className="flex items-center gap-3 md:gap-8">
                     {navLinks.map((link) => (
                         link.external ? (
                             <a
@@ -59,7 +59,7 @@ const GlassNavbar = () => {
                                 className="relative group"
                             >
                                 <span className={`
-                                    text-sm font-medium tracking-wide transition-colors duration-300
+                                    text-xs md:text-sm font-medium tracking-wide transition-colors duration-300 whitespace-nowrap
                                     text-gray-300 group-hover:text-white
                                 `}>
                                     {link.name}
@@ -72,7 +72,7 @@ const GlassNavbar = () => {
                                 className="relative group"
                             >
                                 <span className={`
-                                    text-sm font-medium tracking-wide transition-colors duration-300
+                                    text-xs md:text-sm font-medium tracking-wide transition-colors duration-300 whitespace-nowrap
                                     ${isActive(link.path) ? 'text-yellow-500' : 'text-gray-300 group-hover:text-white'}
                                 `}>
                                     {link.name}
