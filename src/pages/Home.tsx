@@ -65,9 +65,9 @@ const Home = () => {
                         <Link to="/menu" className="inline-block px-8 py-3 border border-white/30 text-white hover:bg-white hover:text-black transition-all duration-300 uppercase tracking-widest text-sm">
                             View Menu
                         </Link>
-                        <Link to="/order" className="inline-block px-8 py-3 border border-white/30 text-white hover:bg-white hover:text-black transition-all duration-300 uppercase tracking-widest text-sm">
+                        <a href="https://order.toasttab.com/online/sawaii-indian-restaurant-615-fm-2281-100" target="_blank" rel="noopener noreferrer" className="inline-block px-8 py-3 border border-white/30 text-white hover:bg-white hover:text-black transition-all duration-300 uppercase tracking-widest text-sm">
                             Order Online
-                        </Link>
+                        </a>
                         <Link to="/catering" className="inline-block px-8 py-3 border border-white/30 text-white hover:bg-white hover:text-black transition-all duration-300 uppercase tracking-widest text-sm">
                             Catering
                         </Link>
@@ -126,18 +126,20 @@ const Home = () => {
                                 <h4 className="text-lg font-bold uppercase tracking-widest">Hours</h4>
                             </div>
                             <div className="text-gray-300 space-y-2">
-                                <div className="flex justify-between md:justify-start gap-8 border-b border-gray-800 pb-1">
-                                    <span className="w-24">Mon - Thu</span>
-                                    <span>11:00 AM - 10:00 PM</span>
+                                <div className="flex justify-between md:justify-start gap-2 border-b border-gray-800 pb-1 whitespace-nowrap text-sm lg:text-base">
+                                    <span className="w-20 shrink-0">Mon - Thu</span>
+                                    <span className="shrink-0">11:00 AM - 2:30 PM</span>
+                                    <span className="shrink-0">4:30 PM - 9:30 PM</span>
                                 </div>
-                                <div className="flex justify-between md:justify-start gap-8 border-b border-gray-800 pb-1">
-                                    <span className="w-24">Fri - Sat</span>
-                                    <span>11:00 AM - 11:00 PM</span>
+                                <div className="flex justify-between md:justify-start gap-2 border-b border-gray-800 pb-1 whitespace-nowrap text-sm lg:text-base">
+                                    <span className="w-20 shrink-0">Fri - Sun</span>
+                                    <span className="shrink-0">11:00 AM - 2:30 PM</span>
+                                    <span className="shrink-0">4:30 PM - 10:00 PM</span>
                                 </div>
-                                <div className="flex justify-between md:justify-start gap-8">
-                                    <span className="w-24">Sunday</span>
+                                {/* <div className="flex justify-between md:justify-start gap-8">
+                                    <span className="w-24"></span>
                                     <span>12:00 PM - 9:30 PM</span>
-                                </div>
+                                </div> */}
                             </div>
                         </div>
 
@@ -151,11 +153,11 @@ const Home = () => {
                                 Have a question or need to book a large party?
                             </p>
                             <div className="space-y-2">
-                                <p className="text-xl text-white font-mono">(555) 123-4567</p>
-                                <p className="text-gray-400">info@sawaii.com</p>
+                                <p className="text-xl text-white font-mono">(469) 908-8686</p>
+                                <p className="text-gray-400">priya@sawaiiusa.com</p>
                             </div>
-                            <Link to="/order" className="inline-block mt-4 px-6 py-2 bg-yellow-600 text-black text-sm font-bold uppercase tracking-widest hover:bg-yellow-500 rounded">
-                                Book Table
+                            <Link to="/order" >
+                                {/* Book Table */}
                             </Link>
                         </div>
 

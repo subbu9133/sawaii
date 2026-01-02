@@ -21,11 +21,11 @@ const GlassNavbar = () => {
 
     const isActive = (path: string) => location.pathname === path;
 
-    const navLinks = [
+    const navLinks: { name: string; path: string; external?: boolean }[] = [
         { name: 'Home', path: '/' },
         { name: 'Menu', path: '/menu' },
         { name: 'Catering', path: '/catering' },
-        { name: 'Order', path: '/order' },
+        { name: 'Order Online', path: 'https://order.toasttab.com/online/sawaii-indian-restaurant-615-fm-2281-100', external: true },
     ];
 
     return (
@@ -50,25 +50,42 @@ const GlassNavbar = () => {
                 {/* Links */}
                 <div className="flex items-center gap-6 md:gap-8">
                     {navLinks.map((link) => (
-                        <Link
-                            key={link.path}
-                            to={link.path}
-                            className="relative group"
-                        >
-                            <span className={`
-                                text-sm font-medium tracking-wide transition-colors duration-300
-                                ${isActive(link.path) ? 'text-yellow-500' : 'text-gray-300 group-hover:text-white'}
-                            `}>
-                                {link.name}
-                            </span>
-                            {isActive(link.path) && (
-                                <motion.div
-                                    layoutId="navbar-indicator"
-                                    className="absolute -bottom-1 left-0 right-0 h-px bg-yellow-500"
-                                    transition={{ type: "spring", stiffness: 380, damping: 30 }}
-                                />
-                            )}
-                        </Link>
+                        link.external ? (
+                            <a
+                                key={link.path}
+                                href={link.path}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="relative group"
+                            >
+                                <span className={`
+                                    text-sm font-medium tracking-wide transition-colors duration-300
+                                    text-gray-300 group-hover:text-white
+                                `}>
+                                    {link.name}
+                                </span>
+                            </a>
+                        ) : (
+                            <Link
+                                key={link.path}
+                                to={link.path}
+                                className="relative group"
+                            >
+                                <span className={`
+                                    text-sm font-medium tracking-wide transition-colors duration-300
+                                    ${isActive(link.path) ? 'text-yellow-500' : 'text-gray-300 group-hover:text-white'}
+                                `}>
+                                    {link.name}
+                                </span>
+                                {isActive(link.path) && (
+                                    <motion.div
+                                        layoutId="navbar-indicator"
+                                        className="absolute -bottom-1 left-0 right-0 h-px bg-yellow-500"
+                                        transition={{ type: "spring", stiffness: 380, damping: 30 }}
+                                    />
+                                )}
+                            </Link>
+                        )
                     ))}
                 </div>
 
