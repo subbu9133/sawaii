@@ -3,7 +3,7 @@ import React, { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import GlassNavbar from './Navigation/GlassNavbar';
 
-import GreenScreenImage from './GreenScreenImage';
+// import GreenScreenImage from './GreenScreenImage';
 import TransparentImage from './TransparentImage';
 
 interface LayoutProps {
@@ -32,7 +32,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                             <TransparentImage
                                 src="/sawaii-name.jpg"
                                 alt="SAWAII Logo"
-                                className="h-16 md:h-24 w-auto object-contain"
+                                className="h-24 md:h-36 w-auto object-contain"
                                 targetColor="white"
                                 tolerance={200}
                             />
