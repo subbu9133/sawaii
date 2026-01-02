@@ -1,22 +1,18 @@
 import { useState } from 'react';
-import { motion, useScroll, useMotionValueEvent } from 'framer-motion';
+import { motion, useScroll, useMotionValueEvent, AnimatePresence } from 'framer-motion';
 import { Link, useLocation } from 'react-router-dom';
-import GreenScreenImage from '../GreenScreenImage';
+import { Menu, X } from 'lucide-react';
+import TransparentImage from '../TransparentImage';
 
 const GlassNavbar = () => {
     const { scrollY } = useScroll();
-    const [hidden, setHidden] = useState(false);
     const [scrolled, setScrolled] = useState(false);
+    const [isOpen, setIsOpen] = useState(false);
     const location = useLocation();
 
     useMotionValueEvent(scrollY, "change", (latest) => {
-        const previous = scrollY.getPrevious() ?? 0;
-        if (latest > previous && latest > 150) {
-            setHidden(true);
-        } else {
-            setHidden(false);
-        }
         setScrolled(latest > 50);
+        if (isOpen && latest > 50) setIsOpen(false); // Optional: close menu on scroll
     });
 
     const isActive = (path: string) => location.pathname === path;
@@ -34,63 +30,66 @@ const GlassNavbar = () => {
                 visible: { y: 0 },
                 hidden: { y: -100 },
             }}
-            animate={hidden ? "hidden" : "visible"}
+            animate="visible"
             transition={{ duration: 0.35, ease: "easeInOut" }}
-            className={`fixed top-0 left-0 right-0 z-50 flex justify-center pt-6 transition-all duration-300 ${scrolled ? 'pt-4' : 'pt-6'}`}
+            className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${scrolled ? 'bg-black shadow-lg py-1' : 'bg-black/50 backdrop-blur-md py-2'}`}
         >
-            <div className={`
-                backdrop-blur-md border border-white/10 rounded-full px-4 md:px-8 py-3 
-                flex items-center gap-3 md:gap-8 shadow-2xl transition-all duration-300
-                ${scrolled ? 'bg-black/80 w-auto' : 'bg-black/40 w-[95%] md:w-[90%] max-w-5xl justify-between'}
-            `}>
-                <Link to="/" className={`flex items-center gap-2 ${scrolled ? 'hidden md:flex' : 'flex'}`}>
-                    <GreenScreenImage src="/sawaii-green-logo.png" alt="SAWAII Logo" className="h-8 md:h-12 w-auto object-contain" tolerance={50} />
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
+                <Link to="/" className="flex items-center gap-2">
+                    <TransparentImage
+                        src="/sawaii-name.jpg"
+                        alt="SAWAII Logo"
+                        className="h-16 md:h-24 w-auto object-contain"
+                        targetColor="white"
+                        tolerance={200}
+                    />
                 </Link>
 
-                {/* Links */}
-                <div className="flex items-center gap-3 md:gap-8">
-                    {navLinks.map((link) => (
-                        link.external ? (
-                            <a
-                                key={link.path}
-                                href={link.path}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="relative group"
-                            >
-                                <span className={`
-                                    text-xs md:text-sm font-medium tracking-wide transition-colors duration-300 whitespace-nowrap
-                                    text-gray-300 group-hover:text-white
-                                `}>
-                                    {link.name}
-                                </span>
-                            </a>
-                        ) : (
-                            <Link
-                                key={link.path}
-                                to={link.path}
-                                className="relative group"
-                            >
-                                <span className={`
-                                    text-xs md:text-sm font-medium tracking-wide transition-colors duration-300 whitespace-nowrap
-                                    ${isActive(link.path) ? 'text-yellow-500' : 'text-gray-300 group-hover:text-white'}
-                                `}>
-                                    {link.name}
-                                </span>
-                                {isActive(link.path) && (
-                                    <motion.div
-                                        layoutId="navbar-indicator"
-                                        className="absolute -bottom-1 left-0 right-0 h-px bg-yellow-500"
-                                        transition={{ type: "spring", stiffness: 380, damping: 30 }}
-                                    />
-                                )}
-                            </Link>
-                        )
-                    ))}
-                </div>
-
-                {/* Scrolled Right Side CTA (Optional - hidden for now to keep it clean) */}
+                {/* Mobile Menu Button - Now visible on all screens */}
+                <button
+                    onClick={() => setIsOpen(!isOpen)}
+                    className="p-2 text-white hover:text-yellow-500 transition-colors"
+                >
+                    {isOpen ? <X size={28} /> : <Menu size={28} />}
+                </button>
             </div>
+
+            {/* Menu Overlay - Visible on all screens when open */}
+            <AnimatePresence>
+                {isOpen && (
+                    <motion.div
+                        initial={{ opacity: 0, y: -20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: -20 }}
+                        transition={{ duration: 0.2 }}
+                        className="absolute top-24 left-4 right-4 bg-black/90 backdrop-blur-xl border border-white/10 rounded-2xl p-6 flex flex-col gap-6 shadow-2xl z-50 max-w-lg mx-auto"
+                    >
+                        {navLinks.map((link) => (
+                            link.external ? (
+                                <a
+                                    key={link.path}
+                                    href={link.path}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="text-lg font-medium text-center text-gray-300 hover:text-white transition-colors"
+                                    onClick={() => setIsOpen(false)}
+                                >
+                                    {link.name}
+                                </a>
+                            ) : (
+                                <Link
+                                    key={link.path}
+                                    to={link.path}
+                                    className={`text-lg font-medium text-center transition-colors ${isActive(link.path) ? 'text-yellow-500' : 'text-gray-300 hover:text-white'}`}
+                                    onClick={() => setIsOpen(false)}
+                                >
+                                    {link.name}
+                                </Link>
+                            )
+                        ))}
+                    </motion.div>
+                )}
+            </AnimatePresence>
         </motion.nav>
     );
 };

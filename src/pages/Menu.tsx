@@ -10,8 +10,8 @@ const Menu = () => {
 
             <div className="max-w-4xl mx-auto px-6 md:px-12">
                 <div className="text-center mb-20">
-                    <span className="text-yellow-500 font-serif italic text-xl">The Collection</span>
-                    <h1 className="text-5xl md:text-7xl font-serif text-white mt-4 tracking-tight">Menu</h1>
+                    {/* <span className="text-yellow-500 font-serif italic text-xl">The Collection</span> */}
+                    <h1 className="text-4xl md:text-6xl font-serif text-white mt-4 tracking-tight">Menu</h1>
                     <div className="w-24 h-px bg-yellow-600/50 mx-auto mt-8"></div>
                 </div>
 

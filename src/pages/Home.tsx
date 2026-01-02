@@ -4,6 +4,7 @@ import { Helmet } from 'react-helmet-async';
 import { Clock, MapPin, Phone } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import GreenScreenImage from '../components/GreenScreenImage';
+import TransparentImage from '../components/TransparentImage';
 
 const heroImages = [
     "/image copy 4.png",
@@ -55,11 +56,12 @@ const Home = () => {
                         transition={{ duration: 1 }}
                     >
                         <div className="flex justify-center mb-12">
-                            <GreenScreenImage
-                                src="/sawaii-green-logo.png"
+                            <TransparentImage
+                                src="/sawaii-name.jpg"
                                 alt="SAWAII Logo"
-                                className="w-full max-w-2xl object-contain drop-shadow-lg"
-                                tolerance={50}
+                                className="h-20 md:h-28 w-auto object-contain"
+                                targetColor="white"
+                                tolerance={200}
                             />
                         </div>
                         <div className="flex flex-col md:flex-row gap-4 justify-center items-center">

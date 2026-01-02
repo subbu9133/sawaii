@@ -1,14 +1,22 @@
 
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import GlassNavbar from './Navigation/GlassNavbar';
 
 import GreenScreenImage from './GreenScreenImage';
+import TransparentImage from './TransparentImage';
 
 interface LayoutProps {
     children: React.ReactNode;
 }
 
 const Layout: React.FC<LayoutProps> = ({ children }) => {
+    const { pathname } = useLocation();
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [pathname]);
+
     return (
         <div className="min-h-screen bg-black text-white relative font-sans selection:bg-yellow-500/30">
             <GlassNavbar />
@@ -21,11 +29,12 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="text-center">
                         <div className="flex items-center justify-center space-x-3 mb-4 mix-blend-difference">
-                            <GreenScreenImage
-                                src="/sawaii-green-logo.png"
-                                alt="Sawaii Logo"
-                                className="h-24 w-auto object-contain"
-                                tolerance={50}
+                            <TransparentImage
+                                src="/sawaii-name.jpg"
+                                alt="SAWAII Logo"
+                                className="h-16 md:h-24 w-auto object-contain"
+                                targetColor="white"
+                                tolerance={200}
                             />
                             {/* <span className="text-3xl font-serif font-bold text-white tracking-widest">SAWAII</span> */}
                         </div>
