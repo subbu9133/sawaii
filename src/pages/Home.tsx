@@ -74,12 +74,6 @@ const Home = () => {
                             <Link to="/catering" className="w-48 py-3 border border-white/30 text-white hover:bg-white hover:text-black transition-all duration-300 uppercase tracking-widest text-sm text-center">
                                 Catering
                             </Link>
-                            <button
-                                onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-                                className="w-48 py-3 border border-white/30 text-white hover:bg-white hover:text-black transition-all duration-300 uppercase tracking-widest text-sm cursor-pointer text-center"
-                            >
-                                Contact
-                            </button>
                         </div>
                     </motion.div>
                 </div>
