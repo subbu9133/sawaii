@@ -22,10 +22,10 @@ const GlassNavbar = () => {
     const isActive = (path: string) => location.pathname === path;
 
     const navLinks: { name: string; path: string; external?: boolean }[] = [
-        { name: 'Home', path: '/' },
-        { name: 'Menu', path: '/menu' },
-        { name: 'Catering', path: '/catering' },
-        { name: 'Order Online', path: 'https://order.toasttab.com/online/sawaii-indian-restaurant-615-fm-2281-100', external: true },
+        { name: 'HOME', path: '/' },
+        { name: 'MENU', path: '/menu' },
+        { name: 'CATERING', path: '/catering' },
+        { name: 'ORDER ONLINE', path: 'https://order.toasttab.com/online/sawaii-indian-restaurant-615-fm-2281-100', external: true },
     ];
 
     return (

@@ -87,7 +87,7 @@ const Home = () => {
             <section className="py-24 px-6 md:px-12 max-w-7xl mx-auto text-center">
                 <h2 className="text-3xl md:text-5xl font-serif mb-8 text-yellow-500">Welcome to Sawaii</h2>
                 <p className="text-gray-300 max-w-3xl mx-auto text-lg leading-relaxed font-light">
-                    Experience the true essence of Indian hospitality. At SAWAII, we bring you recipes passed down through generations, preparing each dish with the finest spices and freshest ingredients to deliver an unforgettable dining experience.
+                    Discover authentic Indian hospitality at SAWAII, where cherished family recipes meet fresh ingredients and carefully selected spices to offer a dining experience worth savoring.
                 </p>
             </section>
 
@@ -158,10 +158,10 @@ const Home = () => {
                                 <h4 className="text-lg font-bold uppercase tracking-widest">Contact</h4>
                             </div>
                             <p className="text-gray-300 text-lg">
-                                Have a question or need to book a large party?
+                                Have a question or need to book a party?
                             </p>
                             <div className="space-y-2">
-                                <p className="text-xl text-white font-mono">(469) 908-8686</p>
+                                <p className="text-xl text-white font-medium">+1 (469) 908-8686</p>
                                 <p className="text-gray-400">priya@sawaiiusa.com</p>
                             </div>
                             <Link to="/order" >
