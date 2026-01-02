@@ -62,21 +62,23 @@ const Home = () => {
                                 tolerance={50}
                             />
                         </div>
-                        <Link to="/menu" className="inline-block px-8 py-3 border border-white/30 text-white hover:bg-white hover:text-black transition-all duration-300 uppercase tracking-widest text-sm">
-                            View Menu
-                        </Link>
-                        <a href="https://order.toasttab.com/online/sawaii-indian-restaurant-615-fm-2281-100" target="_blank" rel="noopener noreferrer" className="inline-block px-8 py-3 border border-white/30 text-white hover:bg-white hover:text-black transition-all duration-300 uppercase tracking-widest text-sm">
-                            Order Online
-                        </a>
-                        <Link to="/catering" className="inline-block px-8 py-3 border border-white/30 text-white hover:bg-white hover:text-black transition-all duration-300 uppercase tracking-widest text-sm">
-                            Catering
-                        </Link>
-                        <button
-                            onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-                            className="inline-block px-8 py-3 border border-white/30 text-white hover:bg-white hover:text-black transition-all duration-300 uppercase tracking-widest text-sm cursor-pointer"
-                        >
-                            Contact
-                        </button>
+                        <div className="flex flex-col md:flex-row gap-4 justify-center items-center">
+                            <Link to="/menu" className="w-48 py-3 border border-white/30 text-white hover:bg-white hover:text-black transition-all duration-300 uppercase tracking-widest text-sm text-center">
+                                View Menu
+                            </Link>
+                            <a href="https://order.toasttab.com/online/sawaii-indian-restaurant-615-fm-2281-100" target="_blank" rel="noopener noreferrer" className="w-48 py-3 border border-white/30 text-white hover:bg-white hover:text-black transition-all duration-300 uppercase tracking-widest text-sm text-center">
+                                Order Online
+                            </a>
+                            <Link to="/catering" className="w-48 py-3 border border-white/30 text-white hover:bg-white hover:text-black transition-all duration-300 uppercase tracking-widest text-sm text-center">
+                                Catering
+                            </Link>
+                            <button
+                                onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+                                className="w-48 py-3 border border-white/30 text-white hover:bg-white hover:text-black transition-all duration-300 uppercase tracking-widest text-sm cursor-pointer text-center"
+                            >
+                                Contact
+                            </button>
+                        </div>
                     </motion.div>
                 </div>
             </section>
