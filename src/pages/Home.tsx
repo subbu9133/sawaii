@@ -3,7 +3,6 @@ import { motion, useScroll, useTransform, AnimatePresence } from 'framer-motion'
 import { Helmet } from 'react-helmet-async';
 import { Clock, MapPin, Phone } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import GreenScreenImage from '../components/GreenScreenImage';
 import TransparentImage from '../components/TransparentImage';
 
 const heroImages = [

@@ -1,56 +1,63 @@
 import { Helmet } from 'react-helmet-async';
-import { menuItems } from '../data/menuData';
+import { menuCategories } from '../data/menuData';
+import TransparentImage from '../components/TransparentImage';
 
 const Menu = () => {
     return (
-        <div className="bg-black min-h-screen pt-24 pb-20">
+        <div className="bg-black min-h-screen pt-24 pb-20 relative overflow-hidden">
             <Helmet>
                 <title>Menu | SAWAII</title>
             </Helmet>
 
-            <div className="max-w-4xl mx-auto px-6 md:px-12">
-                <div className="text-center mb-20">
-                    {/* <span className="text-yellow-500 font-serif italic text-xl">The Collection</span> */}
+            {/* Background Image */}
+            <div className="fixed inset-0 z-0 pointer-events-none flex items-center justify-center overflow-hidden">
+                <TransparentImage
+                    src="/sawaii-name.jpg"
+                    alt="Sawaii Logo Background"
+                    className="w-[32rem] h-auto object-contain opacity-50"
+                    tolerance={80} // Adjust tolerance if needed for the specific green shade
+                />
+            </div>
+
+            <div className="max-w-4xl mx-auto px-6 md:px-12 relative z-10">
+                <div className="text-center mb-5">
                     <h1 className="text-4xl md:text-6xl font-serif text-white mt-4 tracking-tight">Menu</h1>
                     <div className="w-24 h-px bg-yellow-600/50 mx-auto mt-8"></div>
                 </div>
 
                 <div className="space-y-20">
-                    {menuItems.map((category, idx) => (
+                    {menuCategories.map((category, idx) => (
                         <div key={idx} className="relative">
-                            <h2 className="text-3xl font-serif text-yellow-500 mb-10 text-center uppercase tracking-widest border-b border-gray-900 pb-4">
-                                {category.category}
+                            <h2 className="text-3xl font-serif text-yellow-500 mb-10 text-center uppercase tracking-widest border-b border-yellow-500 pb-4">
+                                {category.title}
                             </h2>
 
-                            <div className="grid gap-10">
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-10">
                                 {category.items.map((item, itemIdx) => (
                                     <div key={itemIdx} className="group">
-                                        <div className="flex justify-between items-baseline mb-2 relative">
-                                            <h3 className="text-xl md:text-2xl text-white font-serif tracking-wide bg-black relative z-10 pr-4">
+                                        <div className="flex justify-between items-baseline mb-1">
+                                            <h3 className="text-2xl md:text-3xl text-yellow-500 font-serif tracking-wide whitespace-nowrap">
                                                 {item.name}
                                             </h3>
 
                                             {/* Dotted Line Leader */}
-                                            <div className="absolute inset-0 flex items-baseline">
-                                                <div className="w-full border-b border-dotted border-gray-800"></div>
-                                            </div>
+                                            <div className="flex-grow mx-2 border-b border-dotted border-gray-600 relative top-[-4px]"></div>
 
-                                            <span className="text-xl font-mono text-yellow-500/80 bg-black relative z-10 pl-4">
-                                                {item.price}
-                                            </span>
+                                            {item.price && (
+                                                <span className="text-xl font-mono text-yellow-500/80 whitespace-nowrap">
+                                                    {item.price}
+                                                </span>
+                                            )}
                                         </div>
-                                        <p className="text-gray-500 font-light text-sm md:text-base max-w-2xl leading-relaxed">
-                                            {item.desc}
+
+                                        <p className="text-white font-bold text-sm leading-relaxed text-left">
+                                            {item.description}
                                         </p>
                                     </div>
                                 ))}
                             </div>
                         </div>
                     ))}
-                </div>
-
-                <div className="text-center mt-32 text-gray-600 text-sm font-mono">
-                    <p>Prices subject to change without notice. Please inform your server of any allergies.</p>
                 </div>
             </div>
         </div>
