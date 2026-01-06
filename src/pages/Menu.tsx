@@ -50,7 +50,7 @@ const Menu = () => {
                                             )}
                                         </div>
 
-                                        <p className="text-white font-bold text-sm leading-relaxed text-left">
+                                        <p className="text-white text-sm leading-relaxed text-left">
                                             {item.description}
                                         </p>
                                     </div>
