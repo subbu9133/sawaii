@@ -14,7 +14,7 @@ const Menu = () => {
                 <TransparentImage
                     src="/sawaii-name.jpg"
                     alt="Sawaii Logo Background"
-                    className="w-[32rem] h-auto object-contain opacity-50"
+                    className="w-64 md:w-[32rem] h-auto object-contain opacity-50"
                     tolerance={80} // Adjust tolerance if needed for the specific green shade
                 />
             </div>
