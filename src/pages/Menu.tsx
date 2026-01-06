@@ -25,14 +25,14 @@ const Menu = () => {
                     <div className="w-24 h-px bg-yellow-600/50 mx-auto mt-8"></div>
                 </div>
 
-                <div className="space-y-20">
+                <div className="space-y-10">
                     {menuCategories.map((category, idx) => (
                         <div key={idx} className="relative">
                             <h2 className="text-3xl font-serif text-yellow-500 mb-10 text-center uppercase tracking-widest border-b border-yellow-500 pb-4">
                                 {category.title}
                             </h2>
 
-                            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-10">
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-6">
                                 {category.items.map((item, itemIdx) => (
                                     <div key={itemIdx} className="group">
                                         <div className="flex justify-between items-baseline mb-1">
