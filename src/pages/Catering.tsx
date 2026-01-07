@@ -96,7 +96,7 @@ const Catering = () => {
                             <div className="flex flex-col items-center justify-center space-y-4 md:flex-row md:space-y-0 md:space-x-12">
                                 <div className="flex items-center space-x-3">
                                     <Phone className="text-yellow-500" />
-                                    <span className="text-white text-lg font-medium">+1 (469) 908-8686</span>
+                                    <span className="text-white text-lg font-medium">+1 (610) 400-7770</span>
                                 </div>
                                 <div className="flex items-center space-x-3">
                                     <Mail className="text-yellow-500" />

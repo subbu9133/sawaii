@@ -10,20 +10,17 @@ const galleryImages = [
     "Delhi Ka Dahi Bhalla .png",
     "Eggplant Chaat .png",
     "FISH.png",
-    "Kale Chaat .png",
     "Kale Chaat.png",
     "LRGS.png",
     "Malai Chicken Shish Kabab  .png",
     "Prune Paneer Tikka Kabab .png",
+    "THAI.png",
+    "Tandoori Chicken .png",
     "SAWAII 1.png",
     "SAWAII INSAID.png",
     "SAWAII TABLE .png",
-    "SAWAII TABLE SET UP.png",
     "SAWAII.png",
-    "TABLE 1 .png",
-    "TABLE SETUP.png",
-    "THAI.png",
-    "Tandoori Chicken .png"
+    "TABLE SETUP.png"
 ];
 
 // Helper to format filename into a display name
