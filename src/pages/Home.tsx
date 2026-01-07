@@ -6,7 +6,6 @@ import { Link } from 'react-router-dom';
 import TransparentImage from '../components/TransparentImage';
 
 const heroImages = [
-    "/LOGO.png",
     "/SAWAII.png",
     "/SAWAII INSAID.png",
     "/TABLE SETUP.png"
