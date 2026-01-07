@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { motion, useScroll, useMotionValueEvent, AnimatePresence } from 'framer-motion';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Home as HomeIcon, Image as GalleryIcon } from 'lucide-react';
+import { Menu, X, Home as HomeIcon, Camera as GalleryIcon } from 'lucide-react';
 import TransparentImage from '../TransparentImage';
 
 const GlassNavbar = () => {
