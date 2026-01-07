@@ -285,7 +285,7 @@ export const menuCategories: MenuCategory[] = [
             {
                 id: 'chili-garlic-bullet-naan',
                 name: 'Chili Garlic (Bullet) Naan',
-                description: 'A bold, fiery naan infused with red chilies, fresh garlic, and melted butter crafted for diners who enjoy heat wrapped in artisanal finesse.',
+                description: 'A bold, fiery naan infused with Green chilies, fresh garlic, and melted butter crafted for diners who enjoy heat wrapped in artisanal finesse.',
                 price: '',
                 dietary: 'veg',
                 isBestseller: true

@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { motion, useScroll, useMotionValueEvent, AnimatePresence } from 'framer-motion';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Home as HomeIcon, Image as GalleryIcon } from 'lucide-react';
 import TransparentImage from '../TransparentImage';
 
 const GlassNavbar = () => {
@@ -46,12 +46,20 @@ const GlassNavbar = () => {
                 </Link>
 
                 {/* Mobile Menu Button - Now visible on all screens */}
-                <button
-                    onClick={() => setIsOpen(!isOpen)}
-                    className="p-2 text-white hover:text-yellow-500 transition-colors"
-                >
-                    {isOpen ? <X size={28} /> : <Menu size={28} />}
-                </button>
+                <div className="flex items-center gap-4">
+                    <Link to="/" className="p-2 text-white hover:text-yellow-500 transition-colors">
+                        <HomeIcon size={28} />
+                    </Link>
+                    <Link to="/gallery" className="p-2 text-white hover:text-yellow-500 transition-colors">
+                        <GalleryIcon size={28} />
+                    </Link>
+                    <button
+                        onClick={() => setIsOpen(!isOpen)}
+                        className="p-2 text-white hover:text-yellow-500 transition-colors"
+                    >
+                        {isOpen ? <X size={28} /> : <Menu size={28} />}
+                    </button>
+                </div>
             </div>
 
             {/* Menu Overlay - Visible on all screens when open */}

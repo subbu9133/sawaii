@@ -6,9 +6,10 @@ import { Link } from 'react-router-dom';
 import TransparentImage from '../components/TransparentImage';
 
 const heroImages = [
-    "/image copy 4.png",
-    "/image copy 5.png",
-    "/image copy 6.png"
+    "/LOGO.png",
+    "/SAWAII.png",
+    "/SAWAII INSAID.png",
+    "/TABLE SETUP.png"
 ];
 
 const Home = () => {
@@ -115,7 +116,6 @@ const Home = () => {
                             <p className="text-gray-300 text-lg leading-relaxed">
                                 615 FM 2281 #100<br />
                                 Lewisville, TX 75056<br />
-                                (Sawaii Indian Restaurant)
                             </p>
                             <a href="https://www.google.com/maps/dir/?api=1&destination=Sawaii+Indian+Restaurant+615+FM+2281+%23100+Lewisville+TX+75056" target="_blank" rel="noreferrer" className="inline-block text-sm text-yellow-500 border-b border-yellow-500/50 hover:text-white transition-colors">
                                 Get Directions
@@ -130,7 +130,7 @@ const Home = () => {
                             </div>
                             <div className="text-gray-300 space-y-2">
                                 <div className="flex justify-between md:justify-start gap-2 border-b border-gray-800 pb-1 whitespace-nowrap text-sm lg:text-base">
-                                    <span className="w-20 shrink-0">Mon - Thu</span>
+                                    <span className="w-20 shrink-0">Tue - Thu</span>
                                     <span className="shrink-0">11:00 AM - 2:30 PM</span>
                                     <span className="shrink-0">4:30 PM - 9:30 PM</span>
                                 </div>
@@ -139,10 +139,10 @@ const Home = () => {
                                     <span className="shrink-0">11:00 AM - 2:30 PM</span>
                                     <span className="shrink-0">4:30 PM - 10:00 PM</span>
                                 </div>
-                                {/* <div className="flex justify-between md:justify-start gap-8">
-                                    <span className="w-24"></span>
-                                    <span>12:00 PM - 9:30 PM</span>
-                                </div> */}
+                                <div className="flex justify-between md:justify-start gap-2 border-b border-gray-800 pb-1 whitespace-nowrap text-sm lg:text-base">
+                                    <span className="w-20 shrink-0">Monday</span>
+                                    <span className="shrink-0">Closed</span>
+                                </div>
                             </div>
                         </div>
 
