@@ -3,24 +3,10 @@ import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 
 const galleryImages = [
-    "Beetroot Cutlet .png",
-    "Chicken .png",
-    "Chicken Salt & Pepper .png",
-    "Chicken Tikka Kabab  .png",
-    "Delhi Ka Dahi Bhalla .png",
-    "Eggplant Chaat .png",
-    "FISH.png",
-    "Kale Chaat.png",
-    "LRGS.png",
-    "Malai Chicken Shish Kabab  .png",
-    "Prune Paneer Tikka Kabab .png",
-    "THAI.png",
-    "Tandoori Chicken .png",
-    "SAWAII 1.png",
-    "SAWAII INSAID.png",
-    "SAWAII TABLE .png",
-    "SAWAII.png",
-    "TABLE SETUP.png"
+    "1.png", "2.png", "3.png", "4.png",
+    "5.png", "6.png", "7.png", "8.png",
+    "9.png", "10.png", "11.png", "12.png",
+    "13.png", "14.png", "15.png", "16.png"
 ];
 
 // Helper to format filename into a display name
@@ -63,16 +49,12 @@ const Gallery = () => {
                             className="group relative overflow-hidden rounded-lg aspect-[4/3] bg-neutral-900"
                         >
                             <img
-                                src={`/sawaii/${image}`}
+                                src={`/Untitled design-2/${image}`}
                                 alt={getDisplayName(image)}
                                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-90 group-hover:opacity-100"
                                 loading="lazy"
                             />
-                            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
-                                <span className="text-white font-serif text-xl tracking-wide border-l-2 border-yellow-500 pl-3">
-                                    {getDisplayName(image)}
-                                </span>
-                            </div>
+
                         </motion.div>
                     ))}
                 </div>
