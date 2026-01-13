@@ -129,17 +129,17 @@ const Home = () => {
                             </div>
                             <div className="text-gray-300 space-y-2">
                                 <div className="flex justify-between md:justify-start gap-2 border-b border-gray-800 pb-1 whitespace-nowrap text-sm lg:text-base">
-                                    <span className="w-20 shrink-0">Tue - Thu</span>
+                                    <span className="w-24 shrink-0">Tue - Thu,Sun</span>
                                     <span className="shrink-0">11:00 AM - 2:30 PM</span>
                                     <span className="shrink-0">4:30 PM - 9:30 PM</span>
                                 </div>
                                 <div className="flex justify-between md:justify-start gap-2 border-b border-gray-800 pb-1 whitespace-nowrap text-sm lg:text-base">
-                                    <span className="w-20 shrink-0">Fri - Sun</span>
+                                    <span className="w-24 shrink-0">Fri - Sat</span>
                                     <span className="shrink-0">11:00 AM - 2:30 PM</span>
                                     <span className="shrink-0">4:30 PM - 10:00 PM</span>
                                 </div>
                                 <div className="flex justify-between md:justify-start gap-2 border-b border-gray-800 pb-1 whitespace-nowrap text-sm lg:text-base">
-                                    <span className="w-20 shrink-0">Monday</span>
+                                    <span className="w-24 shrink-0">Monday</span>
                                     <span className="shrink-0">Closed</span>
                                 </div>
                             </div>
