@@ -20,7 +20,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 
     return (
         <div className="min-h-screen bg-black text-white relative font-sans selection:bg-yellow-500/30">
-       //     <PromotionalPopup />
+          
             <GlassNavbar />
 
             <main>
