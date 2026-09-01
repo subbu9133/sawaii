@@ -22,9 +22,9 @@ export const menuCategories: MenuCategory[] = [
         title: 'THE SIP GALLERY',
         items: [
             {
-                id: 'blu-curacao',
-                name: 'Blu Curacao',
-                description: 'A striking sapphire-hued beverage with bright citrus undertones and crisp, cooling notes vibrant, refreshing, and visually stunning.',
+                id: 'Iced Tea',
+                name: 'Iced Tea',
+                description: 'Freshly brewed premium tea, available sweetened or unsweetened, served chilled with a refreshing touch of citrus.',
                 price: '',
                 dietary: 'veg'
             },
@@ -44,9 +44,9 @@ export const menuCategories: MenuCategory[] = [
                 dietary: 'veg'
             },
             {
-                id: 'mango-piyush',
-                name: 'Mango Piyush',
-                description: 'A decadently creamy mango yogurt beverage, gently sweetened and garnished with a hint of dry nuts, offering a refreshingly smooth and indulgent finish.',
+                id: 'Mango Lassi',
+                name: 'Mango Lassi',
+                description: 'A rich and velvety blend of yogurt and mango, delicately sweetened and served chilled for a smooth, refreshing finish.',
                 price: '',
                 dietary: 'veg',
                 isBestseller: true
@@ -58,14 +58,7 @@ export const menuCategories: MenuCategory[] = [
                 price: '',
                 dietary: 'veg'
             },
-            {
-                id: 'oreo-shake',
-                name: 'Oreo Shake',
-                description: 'A luxuriously creamy blend of rich cream and crushed oreo cookies, finished with velvety chocolate notes and a smooth, indulgent finish.',
-                price: '',
-                dietary: 'veg',
-                isBestseller: true
-            }
+    
         ]
     },
     {
@@ -137,13 +130,7 @@ export const menuCategories: MenuCategory[] = [
                 price: '',
                 dietary: 'veg'
             },
-            {
-                id: 'batata-vada',
-                name: 'Batata Vada',
-                description: 'A beloved Indian classic featuring delicately spiced potato croquettes encased in a crisp chickpea batter and fried to golden perfection. Comforting, flavorful, and irresistibly crisp.',
-                price: '',
-                dietary: 'veg'
-            },
+         
             {
                 id: 'crispy-corn-kernel',
                 name: 'Crispy Corn Kernel',
@@ -166,13 +153,7 @@ export const menuCategories: MenuCategory[] = [
                 price: '',
                 dietary: 'non-veg'
             },
-            {
-                id: 'chicken-changezi-cornetto',
-                name: 'Chicken Changezi Cornetto',
-                description: 'Creamy, slow-cooked Changezi chicken elegantly presented in a buttery cornetto shell, where indulgent Mughlai richness meets contemporary presentation.',
-                price: '',
-                dietary: 'non-veg'
-            },
+        
             {
                 id: 'goat-sukkha',
                 name: 'Goat Sukkha',
@@ -211,9 +192,9 @@ export const menuCategories: MenuCategory[] = [
                 isBestseller: true
             },
             {
-                id: 'prune-paneer-tikka-kabab',
-                name: 'Prune Paneer Tikka Kabab',
-                description: 'A gourmet reinterpretation of paneer, delicately stuffed with prune compote and grilled to achieve a refined balance of sweetness and gentle smoke.',
+                id: 'paneer-tikka-kabab',
+                name: 'Paneer-tikka-kabab',
+                description: 'Succulent cubes of paneer marinated in spiced yogurt with peppers and onions, then char-grilled to smoky perfection.',
                 price: '',
                 dietary: 'veg',
                 isBestseller: true
@@ -248,8 +229,8 @@ export const menuCategories: MenuCategory[] = [
                 isBestseller: true
             },
             {
-                id: 'pesto-chicken-kabab',
-                name: 'Pesto Chicken Kabab',
+                id: 'Hariyali Chicken Kabab',
+                name: 'Hariyali Chicken Kabab',
                 description: 'A cream- and cheese-marinated chicken kabab, delicately grilled and finished with pesto for a smooth, refined bite.',
                 price: '',
                 dietary: 'non-veg'
@@ -357,13 +338,7 @@ export const menuCategories: MenuCategory[] = [
                 description: 'Rich, velvety cream sauce with classic depth. Choice of Protein: Paneer, Chicken, Shrimp.',
                 price: ''
             },
-            {
-                id: 'pesto-pasta',
-                name: 'Pesto Pasta',
-                description: 'Fresh basil and herb blend with a bright, aromatic finish. Choice of Protein: Paneer, Chicken, Shrimp.',
-                price: '',
-                isBestseller: true
-            }
+           
         ]
     },
     {
@@ -496,6 +471,12 @@ export const menuCategories: MenuCategory[] = [
                 description: 'Choice of Protein: Paneer, Chicken, Goat, Lamb, Shrimp.',
                 price: ''
             }
+            {
+                id: 'Korma',
+                name: 'Korma',
+                description: 'Choice of Protein: Paneer, Chicken, Goat, Lamb, Shrimp.',
+                price: ''
+            }
         ]
     },
     {
@@ -515,14 +496,8 @@ export const menuCategories: MenuCategory[] = [
                 description: 'Soft, house-made milk dumplings gently fried and soaked in a warm sugar syrup, offering a rich, indulgent, and timeless finish.',
                 price: '',
                 dietary: 'veg'
-            },
-            {
-                id: 'dil-bahar-halwa',
-                name: 'Dil Bahar Halwa',
-                description: 'Fresh beetroot slow-simmered in milk, ghee, and cane sugar, resulting in a vibrant ruby halwa with an earthy sweetness and aromatic depth a dessert that truly pleases the heart.',
-                price: '',
-                dietary: 'veg'
-            },
+            }
+           
             {
                 id: 'cassata',
                 name: 'Cassata',
@@ -540,34 +515,10 @@ export const menuCategories: MenuCategory[] = [
                 isBestseller: true
             },
             {
-                id: 'rasmalai-cheesecake',
-                name: 'Rasmalai Cheesecake',
-                description: 'An exquisite fusion of cheesecake and classic rasmalai, adorned with saffron cream and pistachio crumble. Sophisticated, contemporary, and irresistibly enchanting.',
-                price: '',
-                dietary: 'veg'
-            },
-            {
-                id: 'jamun-tiramisu',
-                name: 'Jamun Tiramisu',
-                description: 'An Indo-Italian creation featuring soft gulab jamuns nestled between espresso-soaked mascarpone layers. A bold, playful reinterpretation of two iconic classics.',
-                price: '',
-                dietary: 'veg'
-            },
-            {
-                id: 'apricot-delight',
-                name: 'Apricot Delight',
-                description: 'Slow-poached apricots layered with cream, offering a delicate balance of sweetness, gentle acidity, and elegant texture.',
+                id: 'Double Chocolate Cake',
+                name: 'Double Chocolate Cake',
+                description: 'A decadent chocolate cake layered with silky dark chocolate ganache, finished with a rich chocolate glaze.',
                 price: '',
                 dietary: 'veg',
                 isBestseller: true
-            },
-            {
-                id: 'mango-mousse',
-                name: 'Mango Mousse',
-                description: 'A silken mango mousse crafted from mangoes, delicately folded for an airy texture and a lingering tropical finish.',
-                price: '',
-                dietary: 'veg'
             }
-        ]
-    }
-];
