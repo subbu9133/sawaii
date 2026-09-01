@@ -470,7 +470,7 @@ export const menuCategories: MenuCategory[] = [
                 name: 'Butter Masala',
                 description: 'Choice of Protein: Paneer, Chicken, Goat, Lamb, Shrimp.',
                 price: ''
-            }
+            },
             {
                 id: 'Korma',
                 name: 'Korma',
@@ -496,7 +496,7 @@ export const menuCategories: MenuCategory[] = [
                 description: 'Soft, house-made milk dumplings gently fried and soaked in a warm sugar syrup, offering a rich, indulgent, and timeless finish.',
                 price: '',
                 dietary: 'veg'
-            }
+            },
            
             {
                 id: 'cassata',
@@ -522,3 +522,6 @@ export const menuCategories: MenuCategory[] = [
                 dietary: 'veg',
                 isBestseller: true
             }
+        ]
+    }
+];
